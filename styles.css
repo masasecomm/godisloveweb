@@ -636,6 +636,117 @@ select{
 }
 .modal-gallery img{ width:100%; height: 100px; object-fit:cover; border-radius: 8px; }
 
+/* ===== Faith / scripture section ===== */
+.verse-band{
+  background: linear-gradient(135deg, #1a2752 0%, #2F5FE0 100%);
+  color: #fff;
+  padding: 56px 28px;
+  text-align: center;
+}
+.verse-band-inner{
+  max-width: 880px;
+  margin: 0 auto;
+}
+.verse-eyebrow{
+  font-family: var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.75);
+  font-weight: 500;
+  display: block;
+  margin-bottom: 18px;
+}
+.verse-text{
+  font-family: var(--script);
+  font-style: italic;
+  font-size: clamp(1.4rem, 3vw, 2.05rem);
+  line-height: 1.4;
+  font-weight: 500;
+  color: #fff;
+  margin: 0 0 14px;
+}
+.verse-ref{
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.85);
+  text-transform: uppercase;
+}
+
+.verses-grid{
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 28px 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.verse-card{
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 26px 26px 24px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.verse-card .verse-card-quote{
+  font-family: var(--script);
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--ink);
+  margin: 0;
+}
+.verse-card .verse-card-ref{
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: auto;
+}
+
+.faith-mission{
+  max-width: 1180px;
+  margin: 0 auto 50px;
+  padding: 0 28px;
+}
+.faith-mission-card{
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 32px 36px;
+  box-shadow: var(--shadow-sm);
+}
+.faith-mission-card h2{
+  font-family: var(--script);
+  font-style: italic;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 0 0 14px;
+  color: var(--ink);
+}
+.faith-mission-card p{
+  color: var(--ink-soft);
+  font-size: 1rem;
+  margin: 0 0 12px;
+  line-height: 1.65;
+}
+.faith-mission-card p:last-child{ margin-bottom: 0; }
+
+/* Header seal recolour for the cross/dove mark */
+.brand-mark .seal{ background: linear-gradient(135deg, #1a2752 0%, #2F5FE0 100%); }
+
+@media (max-width: 900px){
+  .hero-inner{ grid-template-columns: 1fr; }
+  .about-card{ grid-template-columns: 1fr; }
+  .verses-grid{ grid-template-columns: 1fr; }
+  .faith-mission-card{ padding: 24px; }
+}
+
 /* ===== Footer ===== */
 .site-footer{
   padding: 30px 28px 44px;
@@ -646,6 +757,26 @@ select{
   letter-spacing: 0.02em;
 }
 .site-footer a{ color: var(--accent); }
+.site-footer .footer-verse{
+  display: block;
+  margin-bottom: 12px;
+  font-family: var(--script);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  letter-spacing: 0;
+  text-transform: none;
+}
+.site-footer .footer-brand{
+  display: block;
+  font-family: var(--script);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--ink);
+  margin-bottom: 8px;
+  letter-spacing: 0;
+  text-transform: none;
+}
 
 @media (max-width: 900px){
   .hero-inner{ grid-template-columns: 1fr; }
